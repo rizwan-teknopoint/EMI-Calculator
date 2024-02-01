@@ -1,0 +1,29 @@
+.irs--round .irs-from,.irs--round .irs-to,.irs--round .irs-single {
+    display: none;
+}
+
+.irs--round .irs-line {
+    background-color: #d8e024;
+    top: 32px
+}
+
+.irs--round .irs-handle {
+    background-color: #1961ac;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 2px 20px 9px rgba(216,224,36,0.2);
+    width: 16px;
+    height: 16px;
+}
+
+.irs--round .irs-handle:hover, .irs--round .irs-handle:active {
+    background-color: #1961ac;
+}
+
+.irs--round .irs-bar {
+    display: none;
+}
+
+.irs--round .irs-min, .irs--round .irs-max {
+    display: none;
+}

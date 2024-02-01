@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, rgb(153, 161, 108) 0%, rgba(49, 102, 106, 0.989) 100%);
+}
+
+h1 {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    border-radius: 14px;
+    background: aliceblue;
+    padding: 10px 15px;
+}
+
+.container .range-slider {
+    width: 40%;
+}
+
+.range-slider {
+    /* background-color: rgb(118, 195, 195); */
+    padding: 10px 15px;
+}
+
+.wrapper {
+    margin-top: 20px;
+}
+
+.wrapper div {
+    border-radius: 8px;
+}
+
+.wrapper div div {
+    width: 60%;
+    padding: 3px 5px;
+}
+
+.custom-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    line-height: 14px;
+    color: #333;
+}
+
+.graph {
+    width: 60%;
+    /* background-color: blue; */
+    gap: 15px;
+    padding: 10px 15px;
+}
+
+.monthly-emi {
+    padding: 20px 25px;
+    background: linear-gradient(94.99deg, rgba(72, 174, 123, 0.85) -7.43%, rgba(37, 170, 103, 0.91) 37.99%, #29c476 102.12%);
+    border-radius: 20px;
+    max-width: 270px;
+    margin: 0 auto;
+    color: white;
+    gap: 5px;
+    text-align: center;
+}
+
+.monthly-emi .monthly-emi-display {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.payables {
+    text-align: center;
+}
+
+.payables span {
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.payables label {
+    width: 100%;
+
+}
+
+input {
+    outline: none;
+}
+
+#total-interest-payable,
+#total-amount-payable {
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+/* MEDIA  */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        width: 92%;
+    }
+    .container .range-slider {
+        width: 100%;
+        padding: 5px 10px;
+    }
+
+    .graph {
+        width: 100%;
+        padding: 2px 5px;
+    }
+    .emi-displayer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .emi-displayer .payables{
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .wrapper label {
+        font-size: 1rem;
+    }
+
+    .payables div {
+        gap: 1px;
+    }
+
+    .payable span {
+        margin-top: 3px;
+    }
+
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="./CSS/range-slider.css">
+    <link rel="stylesheet" href="./CSS/utils.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <h1>EMI Calculator</h1>
+    <div class="container">
+        <div class="range-slider">
+            <div class="wrapper">
+                <div class="flex align-center justify-between">
+                    <label for="amount" class="f-16">Loan amount</label>
+                    <div class="flex align-center justify-around border-1 px-3 w-full">
+                        <span class="flex align-center f-20">₹</span>
+                        <input type="text" name="" id="loan-amount" class="f-20 border-n w-60 py-3">
+                    </div>
+                </div>
+                <input type="text" class="js-range-slider" name="my_range" value="" id="amount" />
+                <div class="custom-label">
+                    <span>₹1,00,000</span>
+                    <span>₹90,00,000</span>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="flex align-center justify-between">
+                    <label for="duration" class="f-16">Loan duration</label>
+                    <div class="px-3 border-1">
+                        <input type="text" name="" id="loan-duration" class="f-20 border-n w-40">
+                    </div>
+                </div>
+                <input type="text" class="js-range-slider" name="my_range" value="" id="duration" />
+                <div class="custom-label">
+                    <span>12 Months</span>
+                    <span>72 Months</span>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="flex align-center justify-between">
+                    <label for="interest" class="f-16">Rate of interest</label>
+                    <div class="border-1 px-3 flex align-center justify-around">
+                        <input type="text" name="" id="rate-of-interest" class="f-20 border-n w-40">
+                        <span class="">%</span>
+                    </div>
+                </div>
+                <input type="text" class="js-range-slider" name="my_range" value="" id="interest" />
+                <div class="custom-label">
+                    <span>9% p.a</span>
+                    <span>26% p.a</span>
+                </div>
+            </div>
+        </div>
+        <div class="graph flex flex-col">
+            <div class="monthly-emi flex justify-center flex-col">
+                <div>Monthly EMI</div>
+                <div class="monthly-emi-display"></div>
+            </div>
+            <div class="emi-displayer flex justify-between">
+                <div>
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="payables flex flex-col justify-center">
+                    <div class="flex g-7 mt-10">
+                        <span class="bg-blue"></span>
+                        <label for="" >
+                            Total Amount Payable
+                            <div id="total-amount-payable" class="border-n"></div>
+                        </label>
+                    </div>
+                    <div class="flex g-7 mt-10">
+                        <span class="bg-yellow"></span>
+                        <label for="">
+                            Total Interest Payable
+                            <div id="total-interest-payable" class="border-n"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="https://cdnjs.com/libraries/Chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./JS/slider.js"></script>
+    <script src="./JS/index.js"></script>
+</body>
+
+</html>
